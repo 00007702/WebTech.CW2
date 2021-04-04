@@ -1,0 +1,11 @@
+{
+  "name": "cw",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "console.log('Hello Wold')"
+  },
+  "author": "00007702",
+  "license": "ISC"
+}
