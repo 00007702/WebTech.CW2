@@ -22,7 +22,7 @@ app.get('/', (req, res) => {
 	res.render('index')
 })
 
-app.get('/task/create', (req, res) => {
+app.get('/tasks/create', (req, res) => {
 	res.render('create', {show: req.query.success})
 })
 
@@ -51,10 +51,5 @@ app.post('/tasks/create', (req, res) => {
 	// redirect user back
 	
 })
-
-app.get('/tasks', (req, res) => {
-	res.render('tasks', {tasks: tasksDb})
-})
-
 
 app.listen(7702, () => console.log('App is running...'))
