@@ -10,14 +10,41 @@ header {
   display: flex;
   justify-content: space-between;
 }
-header ul {
+a {
+  text-decoration: none;
+}
+.main-list {
   margin-top: auto;
   margin-bottom: auto;
 }
-
-li {
+header h1 {
+  font-weight: 900;
+  font-size: 45px;
+}
+.main-list--item {
   display: inline-block;
   list-style: none;
   margin: 0 10px;
   font-weight: 300;
+  color: #000;
+}
+.main-list--item a {
+  color: #000;
+}
+
+.main-list--item a:hover::after {
+  width: 100%;
+}
+.main-list--item a:hover {
+  color: #3157ff;
+}
+.main-list--item a::after {
+  content: "";
+  display: block;
+  width: 0;
+  margin: auto;
+  height: 2px;
+  background: #000;
+  margin-top: 8px;
+  transition: .3s;
 }

@@ -4,8 +4,8 @@
   "description": "To Do App.",
   "main": "app.js",
   "scripts": {
-    "test": "console.log('Hello Wold')",
-    "dev": "app"
+    "test": "console.log('Hello CW2')",
+    "dev": "node app"
   },
   "author": "00007702",
   "license": "ISC",
