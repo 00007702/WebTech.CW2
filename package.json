@@ -1,11 +1,16 @@
 {
-  "name": "cw",
+  "name": "todo",
   "version": "1.0.0",
-  "description": "",
+  "description": "To Do App.",
   "main": "app.js",
   "scripts": {
-    "test": "console.log('Hello Wold')"
+    "test": "console.log('Hello Wold')",
+    "dev": "app"
   },
   "author": "00007702",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "pug": "^3.0.2"
+  }
 }
