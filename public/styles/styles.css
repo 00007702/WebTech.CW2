@@ -5,7 +5,11 @@ body {
   margin: 0 auto;
   font-family: "Montserrat";
   padding: 0 35px;
+  background: url("/assets/images/bg.svg") center center no-repeat;
+  background-size: 40%;
+  background-position: 100% 100px;
 }
+
 header {
   display: flex;
   justify-content: space-between;
@@ -17,9 +21,20 @@ a {
   margin-top: auto;
   margin-bottom: auto;
 }
-header h1 {
+.icon {
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  margin-right: 5px;
+}
+.title {
   font-weight: 900;
   font-size: 45px;
+  color: #293856;
+}
+.title:hover {
+  color: rgb(106, 116, 255);
+  transition: 0.3s;
 }
 .main-list--item {
   display: inline-block;
@@ -31,7 +46,22 @@ header h1 {
 .main-list--item a {
   color: #000;
 }
-
+.login {
+  display: inline-block;
+  list-style: none;
+  margin: 0 10px;
+  font-weight: 300;
+  color: #000;
+}
+.login a {
+  border-radius: 4px;
+  padding: 5px 10px;
+}
+.login a:hover {
+  background: #3157ff;
+  transition: 0.3s;
+  color: #fff !important;
+}
 .main-list--item a:hover::after {
   width: 100%;
 }
@@ -46,5 +76,52 @@ header h1 {
   height: 2px;
   background: #000;
   margin-top: 8px;
-  transition: .3s;
+  transition: 0.3s;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+.create-title {
+  border-radius: 4px;
+  border: 1px solid #ced4da;
+  margin: 10px 0;
+  height: 20px;
+  box-sizing: border-box;
+  padding: 20px 10px;
+}
+
+.create-title:focus {
+  color: #495057;
+  background-color: #fff;
+  border-color: #80b2ff;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(0, 101, 255, 0.25);
+}
+.create-body {
+  border-radius: 4px;
+  border: 1px solid #ced4da;
+  margin: 10px 0;
+  height: 150px;
+  box-sizing: border-box;
+  padding: 20px 10px;
+}
+
+.create-body:focus {
+  color: #495057;
+  background-color: #fff;
+  border-color: #80b2ff;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(0, 101, 255, 0.25);
+}
+.create-btn {
+  margin: 20px 0;
+  width: 15%;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 15px;
+  border: 1px solid #000;
+  color: #ffffff;
+  background: #0065ff;
 }

@@ -1,19 +1,23 @@
 doctype html
 html
   head
-    title Hey
+    title ToDoApp
     link(rel='stylesheet' type='text/css' href='/assets/styles/styles.css')
   body.page-create
     header
-      h1
-        a(href='/') To Do App
+      
+      h1  
+        a.icon(href='/')
+          img.icon(src="/assets/images/todo.png")
+        a.title(href='/') To Do App
+           
       ul.main-list
         li.main-list--item
           a(href='/tasks') All Tasks
         li.main-list--item
+          a.signup(href='/signUp') Sign Up
+        li.login
           a(href='/Login') Login
-        li.main-list--item
-          a(href='/signUp') Sign Up
 
     main
       block content

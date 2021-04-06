@@ -5,12 +5,12 @@ block content
 
   if show
     div.create-message Your Task was successfully added.
-  
-  form(method="post" action="/tasks/create")
-    label.create-label(for="title") Title
-    input(type="text" name="title" id="title")
 
-    label.create-body(for="body") Body
-    textarea(name="details" id="body" rows="10")
+  form.form(method="post" action="/tasks/create")
+    label.create-label(for="title" ) Title
+    input.create-title(type="text" name="title" id="title" placeholder="Name of the task")
+
+    label.create-label(for="body") Body
+    textarea.create-body(name="details" id="body" rows="10" placeholder="Task" )
 
     input.create-btn(type="submit" value="Create task")
