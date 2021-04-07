@@ -1,11 +1,10 @@
 {
-  "name": "todo",
+  "name": "todoapp",
   "version": "1.0.0",
   "description": "To Do App.",
   "main": "app.js",
   "scripts": {
-    "test": "console.log('Hello CW2')",
-    "dev": "node app"
+    "start": "node app.js"
   },
   "author": "00007702",
   "license": "ISC",

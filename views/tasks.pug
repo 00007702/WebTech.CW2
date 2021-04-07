@@ -1,0 +1,8 @@
+extend layout
+
+block content
+	ul.tasks-list
+		each task in tasks
+			li
+				a(href="/tasks/detail")= task.title
+				a(href="/tasks/" + task.id + "/delete").delete Delete
