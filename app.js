@@ -36,6 +36,7 @@ app.post("/tasks/create", (req, res) => {
     id: generateRandomId(),
     title: req.body.title,
     body: req.body.details,
+    done: false,
   };
 
   // store it
@@ -75,14 +76,34 @@ app.get("/tasks/:id/delete", (req, res) => {
     }
   });
 });
+app.get("/tasks/:id/done", (req, res) => {
+  const id = parseInt(req.params.id);
 
-app.get('/tasks/detail', (req, res) => {
-    res.render('detail')
-})
-app.get('/tasks/signup', (req, res) => {
-  res.render('signup')
-})
-app.get('/tasks/login', (req, res) => {
-  res.render('login')
-})
+  fs.readFile("./data/tasks.json", (err, data) => {
+    const id = parseInt(req.params.id);
+    const index = tasksDb.findIndex((task) => task.id === id);
+
+    const splicedtask = tasksDb.splice(index, 1)[0];
+
+    splicedtask.done = true;
+
+    tasksDb.push(splicedtask);
+    fs.writeFile("./data/tasks.json", JSON.stringify(tasksDb), (err) => {
+      if (err) throw err;
+      res.render("tasks", { tasks: tasksDb });
+    });
+  });
+  fs.writeFile("./data/tasks.json", JSON.stringify(tasksDb), (err) => {
+    if (err) throw err;
+  });
+});
+app.get("/tasks/detail", (req, res) => {
+  res.render("detail");
+});
+app.get("/tasks/signup", (req, res) => {
+  res.render("signup");
+});
+app.get("/tasks/login", (req, res) => {
+  res.render("login");
+});
 app.listen(7702, () => console.log("App is running..."));

@@ -4,5 +4,11 @@ block content
 	ul.tasks-list
 		each task in tasks
 			li
-				a(href="/tasks/detail")= task.title
+				
+				if task.done
+					a.detail.done(href="/tasks/detail")= task.title
+					a.undone(href="/tasks/" + task.id + "/done") Done
+				else 
+					a.detail(href="/tasks/detail")= task.title		
+					a.undone(href="/tasks/" + task.id + "/done") Done
 				a(href="/tasks/" + task.id + "/delete").delete Delete
