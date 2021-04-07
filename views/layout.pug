@@ -4,20 +4,20 @@ html
     title ToDoApp
     link(rel='stylesheet' type='text/css' href='/assets/styles/styles.css')
   body.page-create
+   div.container
     header
-      
       h1  
         a.icon(href='/')
           img.icon(src="/assets/images/todo.png")
         a.title(href='/') To Do App
            
-      ul.main-list
-        li.main-list--item
+      ul.header-list
+        li.header-list--item
           a(href='/tasks') All Tasks
-        li.main-list--item
-          a.signup(href='/signUp') Sign Up
+        li.header-list--item
+          a.signup(href='/tasks/signup') Sign Up
         li.login
-          a(href='/Login') Login
+          a(href='/tasks/login') Login
 
     main
       block content

@@ -1,0 +1,16 @@
+extend layout
+
+block content
+ div.container
+  form.form(method="post" action="/tasks/signup")
+    label.create-label(for="name" ) Name
+    input.create-input(type="text" name="name" id="name" placeholder="Name" required)
+
+    label.create-label(for="email") E-Mail
+    input.create-input(type="email" name="email" id="email" placeholder="E-Mail" required )
+    
+    label.create-label(for="password") Password
+    input.create-input(type="password" name="password" id="password" placeholder="Password" required )
+
+    input.create-btn(type="submit" value="Sign Up")
+

@@ -1,16 +1,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;800&display=swap");
-
-body {
-  max-width: 1000px;
+.container {
+  max-width: 90%;
   margin: 0 auto;
+}
+body {
+  margin: 0 auto;
+  max-width: 90%;
   font-family: "Montserrat";
-  padding: 0 35px;
   background: url("/assets/images/bg.svg") center center no-repeat;
   background-size: 40%;
   background-position: 100% 100px;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
-.create-label{
-    color: #304162 !important;
+.create-label {
+  color: #304162 !important;
 }
 header {
   display: flex;
@@ -19,33 +23,34 @@ header {
 a {
   text-decoration: none;
 }
-.main-list {
+.header-list {
   margin-top: auto;
   margin-bottom: auto;
 }
 .icon {
-  width: 32px;
-  height: 32px;
+  width: 39px;
+  height: 39px;
   cursor: pointer;
   margin-right: 5px;
 }
 .title {
   font-weight: 900;
-  font-size: 45px;
+  font-size: 55px;
   color: #293856;
 }
 .title:hover {
   color: rgb(106, 116, 255);
   transition: 0.3s;
 }
-.main-list--item {
+.header-list--item {
   display: inline-block;
   list-style: none;
   margin: 0 10px;
   font-weight: 300;
   color: #000;
+  font-size: 20px;
 }
-.main-list--item a {
+.header-list--item a {
   color: #000;
 }
 .login {
@@ -54,6 +59,7 @@ a {
   margin: 0 10px;
   font-weight: 300;
   color: #000;
+  font-size: 20px;
 }
 .login a {
   border-radius: 4px;
@@ -64,13 +70,13 @@ a {
   transition: 0.3s;
   color: #fff !important;
 }
-.main-list--item a:hover::after {
+.header-list--item a:hover::after {
   width: 100%;
 }
-.main-list--item a:hover {
+.header-list--item a:hover {
   color: #3157ff;
 }
-.main-list--item a::after {
+.header-list--item a::after {
   content: "";
   display: block;
   width: 0;
@@ -80,6 +86,7 @@ a {
   margin-top: 8px;
   transition: 0.3s;
 }
+
 .form {
   display: flex;
   flex-direction: column;
@@ -136,38 +143,64 @@ a {
 }
 
 .message {
-	background-color: green;
-	color: white;
-	padding: 20px;
-	margin: 10px;
+  background-color: green;
+  color: white;
+  padding: 20px;
+  margin: 10px;
 }
 
 ul.tasks-list {
-	list-style: none;
-	padding: 0;
+  list-style: none;
+  padding: 0;
 }
 
 ul.tasks-list li {
-	padding: 15px;
-	border-bottom: 1px dashed #ccc;
+  padding: 15px;
+  border-bottom: 1px dashed #ccc;
 }
 
 a.delete {
-	float: right;
-	text-decoration: none;
-	background-color: red;
-	color: white;
-	font-size: 0.8em;
-	padding: 5px 10px;
+  float: right;
+  text-decoration: none;
+  background-color: red;
+  color: white;
+  font-size: 0.8em;
+  padding: 5px 10px;
 }
 
-.detail-title{
-    font-size: 40px;
-    color: #3e4f6b;
+.detail-title {
+  font-size: 40px;
+  color: #3e4f6b;
 }
 
-.description{
-    font-size: 25px;
-    color: #4d4d4d;
+.description {
+  font-size: 25px;
+  color: #4d4d4d;
+}
+.create-message {
+  box-sizing: border-box;
+  padding: 10px 15px;
+  background: rgb(104, 253, 117);
+  width: 50%;
+  text-align: center;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  color: rgb(50, 65, 83);
 }
 
+.create-input {
+  border-radius: 4px;
+  border: 1px solid #ced4da;
+  margin: 10px 0;
+  height: 20px;
+  box-sizing: border-box;
+  padding: 20px 10px;
+}
+
+.create-input:focus {
+  color: #495057;
+  background-color: #fff;
+  border-color: #80b2ff;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(0, 101, 255, 0.25);
+}

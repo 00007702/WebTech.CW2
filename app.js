@@ -79,4 +79,10 @@ app.get("/tasks/:id/delete", (req, res) => {
 app.get('/tasks/detail', (req, res) => {
     res.render('detail')
 })
+app.get('/tasks/signup', (req, res) => {
+  res.render('signup')
+})
+app.get('/tasks/login', (req, res) => {
+  res.render('login')
+})
 app.listen(7702, () => console.log("App is running..."));

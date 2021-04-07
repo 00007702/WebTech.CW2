@@ -8,9 +8,9 @@ block content
 
   form.form(method="post" action="/tasks/create")
     label.create-label(for="title" ) Title
-    input.create-title(type="text" name="title" id="title" placeholder="Name of the task")
+    input.create-title(type="text" name="title" id="title" placeholder="Name of the task" required)
 
     label.create-label(for="body") Body
-    textarea.create-body(name="details" id="body" rows="10" placeholder="Task" )
+    textarea.create-body(name="details" id="body" rows="10" placeholder="Task" required)
 
     input.create-btn(type="submit" value="Create task")
